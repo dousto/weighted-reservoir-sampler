@@ -1,0 +1,41 @@
+{
+  "name": "weighted-reservoir-sampler",
+  "version": "1.0.0",
+  "description": "Samples random subsets from streams.",
+  "main": "weighted-reservoir-sampler.js",
+  "scripts": {
+    "test": "node ./bin/test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dousto/weighted-reservoir-sampler.git"
+  },
+  "keywords": [
+    "random",
+      "weighted",
+    "reservoir",
+    "sampling"
+  ],
+  "author": {
+    "name": "Doug Stoeckmann"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dousto/weighted-reservoir-sampler/issues"
+  },
+  "homepage": "https://github.com/dousto/weighted-reservoir-sampler",
+  "devDependencies": {
+    "heap": "^0.2.5",
+    "nodeunit": "^0.9.0"
+  },
+  "_npmUser": {
+    "name": "dousto",
+    "email": "dousto@gmail.com"
+  },
+  "maintainers": [
+    {
+      "name": "dousto",
+      "email": "dousto@gmail.com"
+    }
+  ]
+}
