@@ -31,10 +31,6 @@
   "devDependencies": {
     "nodeunit": "0.9.x"
   },
-  "_npmUser": {
-    "name": "dousto",
-    "email": "dousto@gmail.com"
-  },
   "maintainers": [
     {
       "name": "dousto",
