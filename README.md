@@ -45,7 +45,7 @@ Replaces this instance's configuration object with _config_ (supplying defaults 
 
 ### weightedReservoirSampler.push(item)
 
-Pushes an item to this instance's sample buffer. This function should be called for every item wish to consider for inclusion in the sample.
+Pushes an item to this instance's sample buffer. This function should be called for every item you wish to consider for inclusion in the sample.
 
 ### weightedReservoirSampler.end()
 
