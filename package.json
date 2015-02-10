@@ -14,7 +14,8 @@
     "random",
     "weighted",
     "reservoir",
-    "sampling"
+    "sampling",
+    "stream"
   ],
   "author": {
     "name": "Doug Stoeckmann"
