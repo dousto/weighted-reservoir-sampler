@@ -8,6 +8,25 @@ exports.shouldInitializeConfig = function(test) {
     test.done();
 };
 
+exports.shouldAcceptConfigFromConstructor = function(test) {
+    test.expect(1);
+
+    var testConfig = {
+        sampleSize: 10,
+        weightFunction: function() {
+            return 10;
+        },
+        rng: function() {
+            return 1;
+        }
+    };
+
+    var res = new WeightedReservoirSampler(testConfig);
+
+    test.deepEqual(res.config(), testConfig, "Config values were not set to defaults");
+    test.done();
+};
+
 exports.shouldSetConfigValues = function(test) {
     test.expect(1);
     var res = new WeightedReservoirSampler();
