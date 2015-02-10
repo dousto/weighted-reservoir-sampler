@@ -1,5 +1,5 @@
 # weighted-reservoir-sampler
-----------
+----------------------------
 
 Samples random subsets from streams.
 
@@ -13,18 +13,21 @@ This package is an implementation of the A-ES algorithm as described in [__Weigh
 --------------
 
 ```javascript
-var Res = require('weighted-reservoir-sampler');
+var Sampler = require('weighted-reservoir-sampler');
 
-var res = new Res({
-    sampleSize: 9,
-    weightFunction: function(item) { return (item % 2) + 1 }
+// Example of a sampler which is twice as likely to select odd numbers
+var sampler = new Sampler({
+    sampleSize: 10,
+    weightFunction: function(item) { return (item % 2) + 1; }
 });
 
-for (var i = 0; i < 150; i++) { res.push(i) }
-var sample = res.end();
+for (var i = 0; i < 150; i++) { sampler.push(i); }
+var sample = sampler.end();
 ```
 
+
 ## Class: WeightedReservoirSampler
+----------------------------------
 
 ### new WeightedReservoirSampler([options])
 
@@ -52,7 +55,10 @@ Pushes an item to this instance's sample buffer. This function should be called 
 
 Returns the sample, and resets this instance's sample buffer for reuse. This should be called when you have pushed all items you wish to be considered in the sample.
 
+
+
 ## Configuration
+----------------
 
 The following sections document the different options that can be passed to the _config()_, and _setConfig()_ functions.
 
