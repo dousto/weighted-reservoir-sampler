@@ -8,7 +8,7 @@ module.exports = (function() {
             weightFunction: function() {
                 return 1;
             },
-            rng: Math.random
+            random: Math.random
         };
     };
 
@@ -65,7 +65,7 @@ module.exports = (function() {
                 "\nweightFunction() returned: " + JSON.stringify(item.weight));
             return;
         } else if (item.weight !== 0) {
-            item.key = Math.pow(this._config.rng(), 1 / item.weight);
+            item.key = Math.pow(this._config.random(), 1 / item.weight);
 
             if (this._sample.length < this._config.sampleSize) {
                 Heap.push(this._sample, item, heapCmp);
@@ -89,7 +89,11 @@ module.exports = (function() {
 })();
 
 /*
- var Res = require('weighted-reservoir-sampler')
- var res = new Res().config({sampleSize: 9, weightFunction: function(item) { return (item % 2) + 1 } })
- for (var i = 0; i < 150; i++) { res.push(i) }
- */
+var Res = require('weighted-reservoir-sampler');
+var res = new Res({
+    sampleSize: 9,
+    weightFunction: function(item) { return (item % 2) + 1 }
+});
+for (var i = 0; i < 150; i++) { res.push(i) }
+res.end();
+*/

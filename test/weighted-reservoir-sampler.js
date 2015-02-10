@@ -16,7 +16,7 @@ exports.shouldAcceptConfigFromConstructor = function(test) {
         weightFunction: function() {
             return 10;
         },
-        rng: function() {
+        random: function() {
             return 1;
         }
     };
@@ -126,7 +126,7 @@ exports.shouldDiscardSampleWithSmallestKey = function(test) {
     var i = 1;
     res.config({
         sampleSize: 2,
-        rng: function() { return i++/10 }
+        random: function() { return i++/10 }
     });
 
     res.push(1);
@@ -145,7 +145,7 @@ exports.shouldKeepAllSamplesIfSampleSizeNotReached = function(test) {
     var i = 1;
     res.config({
         sampleSize: 4,
-        rng: function() { return i++/10 }
+        random: function() { return i++/10 }
     });
 
     res.push(1);
@@ -163,7 +163,7 @@ exports.shouldReturnSampleValuesOnEnd = function(test) {
     var i = 1;
     res.config({
         sampleSize: 4,
-        rng: function() { return i++/10 }
+        random: function() { return i++/10 }
     });
 
     res.push(1);
@@ -181,7 +181,7 @@ exports.shouldResetSampleOnEnd = function(test) {
     var i = 1;
     res.config({
         sampleSize: 4,
-        rng: function() { return i++/10 }
+        random: function() { return i++/10 }
     });
 
     res.push(1);
