@@ -76,7 +76,7 @@ Default: 1
 
 ### weightFunction
 
-A weight function which is applied to every __item__ pushed to the weightedReservoirSampler. The returned weight from this function determines how likely an item is to be selected in the sample. An item with a weight of 10 is ten times more likely to be selected than an item with a weight of 1.
+A weight function which is applied to every item pushed to the weightedReservoirSampler. The returned weight from this function determines how likely an item is to be selected in the sample. An item with a weight of 10 is ten times more likely to be selected than an item with a weight of 1.
 
 Note: The weight function should return a number greater than 0, otherwise the corresponding item is ignored.
 
