@@ -17,7 +17,7 @@ var Sampler = require('weighted-reservoir-sampler');
 
 // Example of a sampler which is twice as likely to select odd numbers
 var sampler = new Sampler({
-    sampleSize: 10,
+    sampleSize: 9,
     weightFunction: function(item) { return (item % 2) + 1; }
 });
 
