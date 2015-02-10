@@ -25,9 +25,11 @@
     "url": "https://github.com/dousto/weighted-reservoir-sampler/issues"
   },
   "homepage": "https://github.com/dousto/weighted-reservoir-sampler",
+  "dependencies": {
+    "heap": "0.2.x"
+  },
   "devDependencies": {
-    "heap": "^0.2.5",
-    "nodeunit": "^0.9.0"
+    "nodeunit": "0.9.x"
   },
   "_npmUser": {
     "name": "dousto",
